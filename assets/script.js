@@ -5,10 +5,10 @@ var lowercaseEl = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseEl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberEl = "0123456789";
 var specialCharEl = "!@#$%^&*()_-+={[}]|:;<>.?/";
-let allCharacters = "";
+let allCharacters = " ";
 
 function generatePassword() {
-  allCharacters = "";
+  allCharacters = " ";
   let passwordLength = prompt("Please choose password length between 8 characters and 128 characters.");
   if (
     passwordLength < 8 ||
@@ -57,7 +57,7 @@ function generatePassword() {
   let password = "";
 
   for (let i = 0; i < passwordLength; i++) {
-    password += allCharacter.charAt(
+    password += allCharacters.charAt(
       Math.floor(Math.random() * allCharacters.length)
     );
   }
